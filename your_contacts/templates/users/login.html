@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User login</title>
+</head>
+<body>
+    {{ logged_in }}
+    {% if logged_in %}
+        <h1>Thank you. You are loged in.</h1>
+        <h2>Please go to contacts screen to view your contacts.</h2>
+    {% else %}
+        <h1>Uer Log in form</h1>
+        <form action="/users/login/" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="login">
+        </form>
+    {% endif %}
+</body>
+</html>
