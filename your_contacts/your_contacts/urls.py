@@ -20,8 +20,8 @@ from contacts_book import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('user_contacts/', views.user_contacts),
+    path('', views.home, name='home'),
+    path('user_contacts/', views.user_contacts, name='contacts'),
     path('users/', include('users.urls')),
 
 ]
