@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% block page_contents %}
 
-   <h1>Home page for the "Your Contacts" online app</h1>
-   <p>General info about the app and login form</p>
+   <h1>Welcome to the "Contacts" online app</h1>
+   <h2>Create a list of contacts for free</h2>
+   <p>If you already have an accout, please <a href="{% url 'users:login' %}">login</a> to view your contacts.</p>
+   <p>If you don't have an accout, please feel free to <a href="{% url 'users:login' %}">sign up</a> for a free account.</p>
+   
 
 {% endblock %}
